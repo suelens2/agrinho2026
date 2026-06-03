@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Sustentável - Agrinho 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">AgroForte <span>Sustentável</span></div>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#pilares">Pilares</a>
+            <a href="#calculadora">Simulador</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Produzir com Qualidade, Preservar o Futuro</h1>
+            <p>Descubra como o equilíbrio entre a alta produtividade e o respeito ao meio ambiente garante o alimento de amanhã.</p>
+            <a href="#pilares" class="btn">Conhecer Práticas</a>
+        </div>
+    </section>
+
+    <section id="pilares" class="section-container">
+        <h2>Como produzir sem impactar a natureza?</h2>
+        <p class="subtitle">Tecnologias e manejos que unem eficiência econômica e ecológica.</p>
+        
+        <div class="cards-grid">
+            <div class="card">
+                <h3>1. Agricultura de Precisão</h3>
+                <p>Uso de drones e sensores para aplicar água e fertilizantes apenas onde é necessário, evitando desperdícios e contaminação do solo.</p>
+            </div>
+            <div class="card">
+                <h3>2. Manejo Integrado de Pragas (MIP)</h3>
+                <p>Uso de inimigos naturais e controle biológico para proteger a lavoura, reduzindo drasticamente o uso de defensivos químicos.</p>
+            </div>
+            <div class="card">
+                <h3>3. Rotação de Culturas</h3>
+                <p>Alternar o plantio de diferentes espécies na mesma área melhora a saúde do solo, fixa nutrientes naturalmente e quebra ciclos de pragas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculadora" class="section-container bg-light">
+        <h2>Simulador de Impacto Positivo</h2>
+        <p class="subtitle">Descubra o potencial da tecnologia sustentável no campo.</p>
+        
+        <div class="calc-box">
+            <label for="hectares">Quantos hectares de plantação deseja simular?</label>
+            <input type="number" id="hectares" placeholder="Ex: 50" min="1">
+            <button onclick="calcularImpacto()">Simular Resultados</button>
+
+            <div id="resultado" class="hidden">
+                <h3>Resultado Estimado por Ano:</h3>
+                <p>💧 <strong>Água economizada:</strong> <span id="res-agua">0</span> litros (com irrigação inteligente).</p>
+                <p>🌱 <strong>Emissão de CO₂ evitada:</strong> <span id="res-co2">0</span> kg (com plantio direto).</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Projeto Agrinho - Desenvolvido para um Futuro Sustentável</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #333;
+    background-color: #fafafa;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1b4d3e;
+    color: white;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header .logo span {
+    color: #8ed081;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #8ed081;
+}
+
+/* Seção Hero (Banner) */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1470') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.btn {
+    background-color: #2e7d32;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #1b4d3e;
+}
+
+/* Seções de Conteúdo */
+.section-container {
+    padding: 100px 50px 80px 50px;
+    text-align: center;
+}
+
+.bg-light {
+    background-color: #f0f4f1;
+}
+
+h2 {
+    font-size: 36px;
+    color: #1b4d3e;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+/* Cards Grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 5px solid #2e7d32;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #1b4d3e;
+}
+
+/* Caixa do Simulador */
+.calc-box {
+    background: white;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.calc-box label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.calc-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.calc-box button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.calc-box button:hover {
+    background-color: #1b4d3e;
+}
+
+.hidden {
+    display: none;
+}
+
+#resultado {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px dashed #ddd;
+    text-align: left;
+    animation: fadeIn 0.5s ease-in;
+}
+
+#resultado h3 {
+    color: #1b4d3e;
+    margin-bottom: 10px;
+}
+
+#resultado p {
+    margin-bottom: 8px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1b4d3e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade Básica */
+@media(max-width: 768px) {
+    header { padding: 20px; flex-direction: column; }
+    header nav { margin-top: 15px; }
+    .hero h1 { font-size: 32px; }
+    .section-container { padding: 80px 20px 40px 20px; }
+}
